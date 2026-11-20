@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<title>هجولة سعودية</title>
+<style>
+  * {
+    box-sizing: border-box;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: none;
+  }
+  body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #d9a45a;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  canvas {
+    display: block;
+  }
+  #ui {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    right: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    pointer-events: none;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.75);
+  }
+  .hud-group {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .box {
+    background: rgba(0, 0, 0, 0.55);
+    border: 2px solid #f5b041;
+    border-radius: 12px;
+    padding: 8px 14px;
+  }
+  .label {
+    font-size: 12px;
+    color: #f7dc6f;
+  }
+  .val {
+    font-size: 22px;
+    font-weight: bold;
+  }
+  #drift-banner {
+    position: absolute;
+    top: 86px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(20, 20, 20, 0.72);
+    border: 2px solid #ff4757;
+    color: #ff6b81;
+    padding: 6px 18px;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.15s ease;
+    pointer-events: none;
+  }
+  .controls-bar {
+    position: absolute;
+    bottom: 18px;
+    left: 18px;
+    right: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    pointer-events: none;
+  }
+  .steer-btns, .pedal-btns {
+    display: flex;
+    gap: 12px;
+    pointer-events: auto;
+  }
+  .btn {
+    width: 68px;
+    height: 68px;
+    border-radius: 16px;
+    background: rgba(0, 0, 0, 0.58);
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  .btn:active, .btn.active {
+    background: rgba(245, 176, 65, 0.85);
+    color: #000;
+    transform: scale(0.96);
+  }
+  .btn-gas {
+    border-color: #2ecc71;
+  }
+  .btn-brake {
+    border-color: #e74c3c;
+  }
+  .top-actions {
+    pointer-events: auto;
+    display: flex;
+    gap: 8px;
+  }
+  .small-btn {
+    background: rgba(0, 0, 0, 0.65);
+    color: #fff;
+    border:
+    Enter file contents here
